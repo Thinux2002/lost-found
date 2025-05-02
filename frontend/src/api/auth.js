@@ -34,7 +34,11 @@ export const login = async (email, password) => {
   }
 };
 
-export const getAuthToken = () => localStorage.getItem('token');
+export const getAuthToken = () => {
+  const token = localStorage.getItem('token');
+  console.log('Auth token:', token);
+  return token;
+}
 
 export const getCurrentUser = () => {
   try {
